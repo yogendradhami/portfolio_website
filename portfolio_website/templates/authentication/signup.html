@@ -1,0 +1,53 @@
+{% extends 'basic.html' %} {% block title %} Register {% endblock title %} {%
+block stylecss %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+  integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+{% endblock stylecss %} {% block body %}
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h3 class="text-white bg-dark text-center p-3">Register Here</h3>
+
+      <div class="card p-2">
+        <form action="" method="post">
+        <div class="form-group">
+          <h5>
+            <span><i class="bx bx-envelope"></i> Email </span>
+          </h5>
+          <input type="text" class="form-control mb-3" name="email" />
+        </div>
+
+        <div class="form-group">
+          <h5>
+            <span><i class="fa fa-key"></i> Password </span>
+          </h5>
+          <input type="password" class="form-control mb-3" name="password" />
+        </div>
+
+        <div class="form-group">
+          <h5>
+            <span><i class="fa fa-lock"></i> Confirm Password </span>
+          </h5>
+          <input type="cpassword" class="form-control mb-3" name="password" />
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-dark" type="submit">
+            Register
+          </button>
+        </div>
+   
+      </div>
+    </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock body %}

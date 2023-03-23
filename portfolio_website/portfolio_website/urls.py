@@ -21,4 +21,5 @@ urlpatterns = [
     # path('', include('blog.urls')),
     path('authentication/', include('authapp.urls')),
     path('', include('portfolio.urls')),
+    path('portfolio/', include('portfolio.urls')),
 ]

@@ -8,16 +8,16 @@ def Home(request):
 def About(request):
     return render(request, 'about.html')
 
-def Contact(request):
-    if request.method== 'POST':
-        fname=request.POST.get('name')
-        femail=request.POST.get('email')
-        fnumber=request.POST.get('number')
-        fdescription=request.POST.get('description')
-        query=Contact(name=fname,email=femail,number=fnumber,description=fdescription)
-        query.save()
+def Contacts(request):
+    if request.method == 'POST':
+        con=Contact()
+        con.name=request.POST.get('name')
+        con.email=request.POST.get('email')
+        con.number = request.POST.get('number')
+        con.description= request.POST.get('description')
+        con.save()
         messages.success(request, "Thanks for contacting. We will get by you soon")
-        
-        return redirect('/contact')
+        return redirect('contact')
+
 
     return render(request, 'contact.html')

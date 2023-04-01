@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authapp',
-    'blog',
     'portfolio',
     'portfolio_api',
     'rest_framework',

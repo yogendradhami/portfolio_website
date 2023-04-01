@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'authapp',
     'blog',
     'portfolio',
+    'portfolio_api',
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [

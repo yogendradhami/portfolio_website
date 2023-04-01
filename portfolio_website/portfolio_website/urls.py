@@ -21,5 +21,8 @@ urlpatterns = [
     # path('', include('blog.urls')),
     path('authentication/', include('authapp.urls')),
     path('', include('portfolio.urls')),
-    path('portfolio/', include('portfolio.urls')),
+    # path('portfolio/', include('portfolio.urls')),
+
+    # path('api-auth/', include('rest_framework.urls')),
+    # path('api/v1/portfolio/',include('portfolio_api.urls')),
 ]

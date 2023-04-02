@@ -20,8 +20,15 @@ def SignUp(request):
             pass
         myuser=User.objects.create_user(get_email,get_email,get_password)
         myuser.save()
-        messages.success(request, "User created successfully. Please login now!!")
-        return redirect('/authentication/login/')
+        myuser=authenticate(username=get_email, password=get_password)
+
+        if myuser is not None:
+            login(request, myuser)
+            messages.success(request, "User Created &Login Successfully.")
+            return redirect('/')
+        
+        # messages.success(request, "User created successfully. Please login now!!")
+        # return redirect('/authentication/login/')
     
     return render(request, 'authentication/signup.html')
 

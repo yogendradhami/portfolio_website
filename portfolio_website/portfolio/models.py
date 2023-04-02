@@ -19,3 +19,17 @@ class Blog(models.Model):
     
     def __str__(self):
         return self.title
+
+class Internship(models.Model):
+    full_name=models.CharField(max_length=100)
+    usn=models.CharField(max_length=100)
+    email=models.CharField(max_length=100)
+    college_name=models.CharField(max_length=100)
+    offer_status=models.CharField(max_length=100)
+    start_date=models.CharField(max_length=100)
+    end_date=models.CharField(max_length=100)
+    project_report=models.CharField(max_length=100)
+    timeStamp=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.usn

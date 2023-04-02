@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from  django.contrib import messages
-from portfolio.models import Contact
+from portfolio.models import Contact,Blog
 # Create your views here.
 def Home(request):
     return render(request, 'layouts/master.html')
@@ -21,3 +21,14 @@ def Contacts(request):
 
 
     return render(request, 'contact.html')
+
+def Index_Blog(request):
+    posts= Blog.objects.all()
+    context={"posts":posts}
+    return render(request, 'blog.html',context)
+
+def Index_Service(request):
+    return render(request, 'service.html')
+
+def InternshipDetails(request):
+    return render(request, 'internship.html')
